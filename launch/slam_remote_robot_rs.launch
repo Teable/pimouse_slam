@@ -3,9 +3,9 @@
   <node pkg="pimouse_slam" name="motors" type="motors.py" required="true" />
 
   <include file="$(find realsense2_camera)/launch/rs_camera.launch" >
-	<param name="filters" value="pointcloud" />
-	<param name="enable_infra1" value="false" />
-	<param name="enable_infra2" value="false" />
+	<arg name="filters" value="pointcloud" />
+	<arg name="enable_infra1" value="false" />
+	<arg name="enable_infra2" value="false" />
   </include>
 
   <node pkg="depthimage_to_laserscan" name="depthimage_to_laserscan" type="depthimage_to_laserscan" required="true" >
